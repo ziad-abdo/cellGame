@@ -17,7 +17,13 @@ LifeController.prototype = {
 
   cellScan: function(){
     for (var y = 0; y<=(this.Model.arrayLength-1); y++){
-      this.Model.allPossibleCells[i].checkNeighbors()
+      // debugger
+      this.Model.allPossibleCells[y].checkNeighbors()
+    }
+  },
+  cellNextStep: function(){
+    for (var q = 0; q<=(this.Model.arrayLength-1); q++){
+      this.Model.allPossibleCells[q].alive = this.Model.allPossibleCells[q].nextState
     }
   },
 
