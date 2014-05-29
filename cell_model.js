@@ -41,7 +41,7 @@ Cell.prototype={
 
   },
   liveOutcome: function(value){
-     if(value<2 || value>4){
+     if((value<2) || (value>4)){
         return false
       }else{
         return true
