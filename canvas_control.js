@@ -1,6 +1,7 @@
 window.onload = function(){
   mainControl = new LifeController()
   mainControl.setup()
+  mainControl.Model.allPossibleCells[5].alive = true
 }
 
 
@@ -16,7 +17,6 @@ LifeController.prototype = {
 
   cellScan: function(){
     for (i = 0; i<=(this.Model.arrayLength-1); i++){
-      debugger
       this.View.setDisplay(this.Model.allPossibleCells[i].alive, this.Model.allPossibleCells[i].position)
     }
   }
