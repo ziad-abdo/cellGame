@@ -1,7 +1,6 @@
 window.onload = function(){
   mainControl = new LifeController()
   mainControl.setup()
-  mainControl.Model.allPossibleCells[5].alive = true
 }
 
 
