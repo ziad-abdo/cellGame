@@ -1,7 +1,6 @@
 window.onload = function(){
   mainControl = new LifeController()
   mainControl.setup()
-  mainControl.fourSquareStart()
 }
 
 
@@ -23,7 +22,7 @@ LifeController.prototype = {
   },
   cellNextStep: function(){
     for (var q = 0; q<=(this.Model.arrayLength-1); q++){
-      this.Model.allPossibleCells[q].alive = this.Model.allPossibleCells[q].nextState
+      this.Model.allPossibleCells[q].Step()
     }
   },
 
@@ -40,5 +39,17 @@ LifeController.prototype = {
     this.Model.allPossibleCells[47].alive = true
     this.Model.allPossibleCells[44].alive = true
     // this.Model.allPossibleCells[44].nextState = true
+  },
+
+  threeCellDiagonalStart: function(){
+    this.Model.allPossibleCells[36].alive = true
+    this.Model.allPossibleCells[45].alive = true
+    this.Model.allPossibleCells[27].alive = true
+  },
+
+  threeCellVerticleStart: function(){
+    this.Model.allPossibleCells[33].alive = true
+    this.Model.allPossibleCells[43].alive = true
+    this.Model.allPossibleCells[53].alive = true
   }
 }
