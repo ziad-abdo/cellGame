@@ -12,5 +12,12 @@ function LifeController(){
 LifeController.prototype = {
   setup: function(){
     this.View.setScreen()
+  },
+
+  cellScan: function(){
+    for (i = 0; i<=(this.Model.arrayLength-1); i++){
+      debugger
+      this.View.setDisplay(this.Model.allPossibleCells[i].alive, this.Model.allPossibleCells[i].position)
+    }
   }
 }
