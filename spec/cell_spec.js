@@ -28,4 +28,7 @@ describe("Cell Testing: ", function(){
     expect( testCell.deadOutcome(3) ).toEqual( true )
   })
 
+  it("returns false for values other than 3", function(){
+    expect( testCell.deadOutcome(14) ).toEqual ( false )
+  })
 })
