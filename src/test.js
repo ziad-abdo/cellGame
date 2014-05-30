@@ -1,3 +1,0 @@
-function helloCell(){
-  return "helloCell"
-}
