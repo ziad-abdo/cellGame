@@ -1,9 +1,9 @@
-window.onload = function(){
+window.addEventListener( 'load', function(){
   mainControl = new LifeController()
   mainControl.gliderCellStart()
   mainControl.setup()
-  // window.setInterval(mainControl.runSet.bind(mainControl), 700)
-}
+  window.setInterval(mainControl.runSet.bind(mainControl), 700)
+})
 
 
 function LifeController(){
