@@ -40,4 +40,8 @@ describe("Cell Testing: ", function(){
   it("when cell is dead returns false when numberOfLiveCells not 3", function(){
     expect( testCell.cellBehavior(15) ).toEqual( false )
   })
+
+  it("returns array [1,10,-10,11,-9] if cell position is a left boundary", function(){
+    expect( testCell.checkType(30) ).toEqual( [1, 10, -10, 11, -9] )
+  })
 })
