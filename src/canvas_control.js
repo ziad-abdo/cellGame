@@ -60,7 +60,7 @@ LifeController.prototype = {
     this.Model.allPossibleCells[46].alive = true
     this.Model.allPossibleCells[47].alive = true
     this.Model.allPossibleCells[44].alive = true
-    this.interval = setInterval(this.runSet.bind(this), 70)
+    this.interval = setInterval(this.runSet.bind(this), 600)
   },
   tetrisCellStart: function(){
     //works if it isnt touching edges,.... need to configure edge logic.
@@ -69,7 +69,7 @@ LifeController.prototype = {
     this.Model.allPossibleCells[44].alive = true
     this.Model.allPossibleCells[45].alive = true
     this.Model.allPossibleCells[46].alive = true
-    this.interval = setInterval(this.runSet.bind(this), 70)
+    this.interval = setInterval(this.runSet.bind(this), 600)
   },
   gliderCellStart: function(){//ITS NOT FUCKED. GLIDER FUCKING WORKS
     clearInterval( this.interval )
@@ -78,6 +78,6 @@ LifeController.prototype = {
     this.Model.allPossibleCells[34].alive = true
     this.Model.allPossibleCells[24].alive = true
     this.Model.allPossibleCells[13].alive = true
-    this.interval = setInterval(this.runSet.bind(this), 70)
+    this.interval = setInterval(this.runSet.bind(this), 600)
   }
 }
