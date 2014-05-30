@@ -23,4 +23,9 @@ describe("Cell Testing: ", function(){
   it("returns true for values in between 1 and 4", function(){
     expect( testCell.liveOutcome(3) ).toEqual( true )
   })
+
+  it("returns true for 3", function(){
+    expect( testCell.deadOutcome(3) ).toEqual( true )
+  })
+
 })
