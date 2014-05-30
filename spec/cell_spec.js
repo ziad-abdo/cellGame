@@ -29,6 +29,10 @@ describe("Cell Testing: ", function(){
   })
 
   it("returns false for values other than 3", function(){
-    expect( testCell.deadOutcome(14) ).toEqual ( false )
+    expect( testCell.deadOutcome(14) ).toEqual( false )
+  })
+
+  it("when cell is dead returns true when numberOfLiveCells is 3", function(){
+    expect( testCell.cellBehavior(3) ).toEqual( true )
   })
 })

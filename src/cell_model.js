@@ -32,11 +32,11 @@ Cell.prototype={
     }
     this.nextState = this.cellBehavior(neighborsState.length)
   },
-  cellBehavior: function(value){
+  cellBehavior: function(numberOfLiveCells){
     if (this.alive){
-      return this.liveOutcome(value)
+      return this.liveOutcome(numberOfLiveCells)
     }else{
-      return this.deadOutcome(value)
+      return this.deadOutcome(numberOfLiveCells)
     }
 
   },
