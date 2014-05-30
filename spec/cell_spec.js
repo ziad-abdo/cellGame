@@ -48,4 +48,8 @@ describe("Cell Testing: ", function(){
   it("returns specific array if cell position is a right boundary", function(){
     expect( testCell.checkType(69) ).toEqual( [-1, 10, -10, -11, 9] )
   })
+
+  it("returns specific array if cell position is not a boundary cell", function(){
+    expect( testCell.checkType(45) ).toEqual([1, -1, 10, -10, -11, 11, -9, 9])
+  })
 })
