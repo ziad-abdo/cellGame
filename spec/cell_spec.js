@@ -41,7 +41,11 @@ describe("Cell Testing: ", function(){
     expect( testCell.cellBehavior(15) ).toEqual( false )
   })
 
-  it("returns array [1,10,-10,11,-9] if cell position is a left boundary", function(){
+  it("returns specific array if cell position is a left boundary", function(){
     expect( testCell.checkType(30) ).toEqual( [1, 10, -10, 11, -9] )
+  })
+
+  it("returns specific array if cell position is a right boundary", function(){
+    expect( testCell.checkType(69) ).toEqual( [-1, 10, -10, -11, 9] )
   })
 })
