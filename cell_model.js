@@ -41,7 +41,7 @@ Cell.prototype={
 
   },
   liveOutcome: function(value){
-     if((value<2) || (value>4)){
+     if((value<2) || (value>=4)){
         return false
       }else{
         return true
@@ -56,18 +56,29 @@ Cell.prototype={
   },
 
   accurateChecks: function(cellPosition){
-   allPossibleChecks = [1, -1, 10, -10, -11, 11, -9, 9]
+   possibleChecks = this.checkType(cellPosition)
    valid_array = []
    for (var b=0; b<8; b++){
-    if (this.isValid(cellPosition, allPossibleChecks[b])){
-      valid_array.push(cellPosition + allPossibleChecks[b])
+    if (this.isValid(cellPosition, possibleChecks[b])){
+      valid_array.push(cellPosition + possibleChecks[b])
     }
    }
    return valid_array
   },
 
   isValid: function(cellPosition, displacement){
-   return ((cellPosition + displacement) > 0) && ((cellPosition + displacement) < 100)
+    cellToCheck = cellPosition + displacement
+  return (cellToCheck > 0) && (cellToCheck < 100)
+  },
+
+  checkType: function(cellPosition){
+    if (cellPosition%10 === 0){//left wall
+      return [1, 10, -10, 11, -9]
+    }
+    if (cellPosition%10 === 9){//right wall
+      return [-1, 10, -10, -11, 9]
+    }
+      return [1, -1, 10, -10, -11, 11, -9, 9]
   },
 
   Step: function(){

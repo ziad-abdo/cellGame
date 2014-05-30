@@ -1,8 +1,8 @@
 window.onload = function(){
   mainControl = new LifeController()
-  mainControl.threeCellVerticleStart()
+  mainControl.gliderCellStart()
   mainControl.setup()
-  // window.setInterval(mainControl.runSet.bind(mainControl), 1000)
+  // window.setInterval(mainControl.runSet.bind(mainControl), 700)
 }
 
 
@@ -47,42 +47,14 @@ LifeController.prototype = {
     this.Model.allPossibleCells[47].alive = true
     this.Model.allPossibleCells[44].alive = true
   },
-
-  threeCellDiagonalStart: function(){//works
-    this.Model.allPossibleCells[36].alive = true
-    this.Model.allPossibleCells[45].alive = true
-    this.Model.allPossibleCells[27].alive = true
-  },
-
-  threeCellVerticleStart: function(){//works
-    this.Model.allPossibleCells[33].alive = true
-    this.Model.allPossibleCells[43].alive = true
-    this.Model.allPossibleCells[53].alive = true
-  },
   tetrisCellStart: function(){
-    this.Model.allPossibleCells[23].alive = true
-    this.Model.allPossibleCells[32].alive = true
-    this.Model.allPossibleCells[33].alive = true
-    this.Model.allPossibleCells[34].alive = true
-  },
-  randomCellStart: function(){//fucked
+  //works if it isnt touching edges,.... need to configure edge logic.
     this.Model.allPossibleCells[35].alive = true
-    this.Model.allPossibleCells[43].alive = true
-    this.Model.allPossibleCells[44].alive = true
-    this.Model.allPossibleCells[54].alive = true
-  },
-  threeTetrisStart: function(){//works
     this.Model.allPossibleCells[44].alive = true
     this.Model.allPossibleCells[45].alive = true
-    this.Model.allPossibleCells[54].alive = true
+    this.Model.allPossibleCells[46].alive = true
   },
-  fourVerticleStart: function(){ //works
-    this.Model.allPossibleCells[34].alive = true
-    this.Model.allPossibleCells[44].alive = true
-    this.Model.allPossibleCells[54].alive = true
-    this.Model.allPossibleCells[64].alive = true
-  },
-  gliderCellStart: function(){//fucked
+  gliderCellStart: function(){//ITS NOT FUCKED. GLIDER FUCKING WORKS
     this.Model.allPossibleCells[32].alive = true
     this.Model.allPossibleCells[33].alive = true
     this.Model.allPossibleCells[34].alive = true
