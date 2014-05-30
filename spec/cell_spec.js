@@ -52,4 +52,8 @@ describe("Cell Testing: ", function(){
   it("returns specific array if cell position is not a boundary cell", function(){
     expect( testCell.checkType(45) ).toEqual([1, -1, 10, -10, -11, 11, -9, 9])
   })
+
+  it("returns specific array when cell position is 0", function(){
+    expect( testCell.accurateChecks(0) ).toEqual([1, 10, 11])
+  })
 })
