@@ -1,5 +1,22 @@
 .main_screen {
   border: 1px solid black;
-  /*width:500;
-  height:500;*/
 }
+
+.canvas {
+  text-align: center;
+}
+
+.pattern-selector{
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.pattern-selector div{
+  display:inline-block;
+  border:2px solid black;
+  margin: 0 10px;
+  padding: 5px;
+  font-family: arial;
+  text-transform: uppercase;
+}
+
