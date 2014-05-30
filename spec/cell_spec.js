@@ -11,4 +11,16 @@ describe("Cell Testing: ", function(){
   it("has generated an array of cells", function(){
     expect( testCellModel.allPossibleCells[50].alive ).toEqual( testCell.alive )
   })
+
+  it("returns false for values greater than 3", function(){
+    expect( testCell.liveOutcome(4) ).toEqual( false )
+  })
+
+  it("returns false for values less than 2", function(){
+    expect( testCell.liveOutcome(1) ).toEqual( false )
+  })
+
+  it("returns true for values in between 1 and 4", function(){
+    expect( testCell.liveOutcome(3) ).toEqual( true )
+  })
 })
