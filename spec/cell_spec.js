@@ -35,4 +35,8 @@ describe("Cell Testing: ", function(){
   it("when cell is dead returns true when numberOfLiveCells is 3", function(){
     expect( testCell.cellBehavior(3) ).toEqual( true )
   })
+
+  it("when cell is dead returns false when numberOfLiveCells not 3", function(){
+    expect( testCell.cellBehavior(15) ).toEqual( false )
+  })
 })
