@@ -9,7 +9,8 @@ describe("Cell Testing: ", function(){
   })
 
   it("has generated an array of cells", function(){
-    expect( testCellModel.allPossibleCells[50].alive ).toEqual( testCell.alive )
+    testCell.position = 50
+    expect( testCellModel.allPossibleCells[50] ).toEqual( testCell )
   })
 
   it("returns false for values greater than 3", function(){

@@ -59,16 +59,15 @@ Cell.prototype={
    possibleChecks = this.checkType(cellPosition)
    valid_array = []
    for (var b=0; b<8; b++){
-    if (this.isValid(cellPosition, possibleChecks[b])){
+    if (this.isValid( cellPosition + possibleChecks[b] )){
       valid_array.push(cellPosition + possibleChecks[b])
     }
    }
    return valid_array
   },
 
-  isValid: function(cellPosition, displacement){
-    cellToCheck = cellPosition + displacement
-  return (cellToCheck > 0) && (cellToCheck < 100)
+  isValid: function( displacement ){
+  return ( displacement > 0) && ( displacement < 100)
   },
 
   checkType: function(cellPosition){
