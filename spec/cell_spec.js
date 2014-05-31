@@ -9,6 +9,51 @@ describe("Cell Testing: ", function(){
   })
 
   it("has generated an array of cells", function(){
-    expect( testCellModel.allPossibleCells[50].alive ).toEqual( testCell.alive )
+    testCell.position = 50
+    expect( testCellModel.allPossibleCells[50] ).toEqual( testCell )
+  })
+
+  it("returns false for values greater than 3", function(){
+    expect( testCell.liveOutcome(4) ).toEqual( false )
+  })
+
+  it("returns false for values less than 2", function(){
+    expect( testCell.liveOutcome(1) ).toEqual( false )
+  })
+
+  it("returns true for values in between 1 and 4", function(){
+    expect( testCell.liveOutcome(3) ).toEqual( true )
+  })
+
+  it("returns true for 3", function(){
+    expect( testCell.deadOutcome(3) ).toEqual( true )
+  })
+
+  it("returns false for values other than 3", function(){
+    expect( testCell.deadOutcome(14) ).toEqual( false )
+  })
+
+  it("when cell is dead returns true when numberOfLiveCells is 3", function(){
+    expect( testCell.cellBehavior(3) ).toEqual( true )
+  })
+
+  it("when cell is dead returns false when numberOfLiveCells not 3", function(){
+    expect( testCell.cellBehavior(15) ).toEqual( false )
+  })
+
+  it("returns specific array if cell position is a left boundary", function(){
+    expect( testCell.checkType(30) ).toEqual( [1, 10, -10, 11, -9] )
+  })
+
+  it("returns specific array if cell position is a right boundary", function(){
+    expect( testCell.checkType(69) ).toEqual( [-1, 10, -10, -11, 9] )
+  })
+
+  it("returns specific array if cell position is not a boundary cell", function(){
+    expect( testCell.checkType(45) ).toEqual([1, -1, 10, -10, -11, 11, -9, 9])
+  })
+
+  it("returns specific array when cell position is 0", function(){
+    expect( testCell.accurateChecks(0) ).toEqual([1, 10, 11])
   })
 })
