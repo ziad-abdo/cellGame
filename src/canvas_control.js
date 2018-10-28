@@ -11,7 +11,6 @@ window.addEventListener( 'load', function(){
 function LifeController(){
   this.View = new CanvasView();
   this.Model = new CellModel()
-  this.interval = setInterval()
 }
 
 LifeController.prototype = {
@@ -37,7 +36,6 @@ LifeController.prototype = {
 
   cellScan: function(){
     for (var y = 0; y<=(this.Model.arrayLength-1); y++){
-      // debugger
       this.Model.allPossibleCells[y].checkNeighbors()
     }
   },
