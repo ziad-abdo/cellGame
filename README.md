@@ -1,3 +1,4 @@
 created by: Ziad Abdo
-1. I dont know what is to be included in the readme.
-2. This is a work in progress and I dont have plans to implement TDD.
+1. Local usage: using your favorite browser simpy open index.html.
+2. Testing: if you want to run the few tests that exist, simply open SpecRunner.html in your favorite browser.
+
